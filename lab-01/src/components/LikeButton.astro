@@ -1,5 +1,5 @@
 ---
-import Icon from "astro-icon";
+import { Icon } from "astro-icon/components";
 
 interface Props {
   size?: "md" | "lg";
@@ -11,8 +11,7 @@ const { size = "md" } = Astro.props;
 <button
   type="button"
   class="text-red-500 hover:scale-105 rounded-full flex items-center justify-center"
-  class:list={[size === "md" && "h-12 w-12", size === "lg" && "h-14 w-14"]}
->
+  class:list={[size === "md" && "h-12 w-12", size === "lg" && "h-14 w-14"]}>
   <Icon
     name="mdi:heart"
     class:list={[size === "md" && "h-8 w-8", size === "lg" && "h-10 w-10"]}
