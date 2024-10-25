@@ -10,11 +10,9 @@
     "preview": "astro preview"
   },
   "dependencies": {
-    "@astrojs/svelte": "^4.0.0",
     "@astrojs/tailwind": "^5.0.0",
-    "astro": "^3.0.7",
-    "astro-icon": "^0.8.1",
-    "svelte": "^4.0.0",
+    "astro": "^4.16.7",
+    "astro-icon": "^1.1.1",
     "swiper": "^11.1.4",
     "tailwindcss": "^3.0.24"
   },
