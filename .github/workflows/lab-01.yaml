@@ -9,6 +9,11 @@ jobs:
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
+    # Set the working directory for all steps
+    defaults:
+      run:
+        working-directory: ./lab-01
+    if: "contains(github.event.head_commit.message, '[lab-01]')"
 
     steps:
       - name: Checkout
