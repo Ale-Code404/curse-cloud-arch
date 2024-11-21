@@ -1,101 +1,117 @@
----
-import PageHeader from "../components/PageHeader.astro";
-import PageFooter from "../components/PageFooter.astro";
-import EventSlider from "../components/EventSlider.astro";
-
-import HomePagePosts from "../components/Blog/HomePagePosts.astro";
-
-import BannerEvents from "../components/BannerEvents.astro";
-import { playlists, morePlaylists } from "../lib/data";
-
-import EventsTable from "../components/EventsTable.astro";
-import EventCategories from "../components/EventCategories.astro";
-import Ticker from "../components/Ticker.astro";
-
-import Layout from "../layouts/Layout.astro";
----
-
-<Layout title="Home">
-  <div
-    id="playlist-container"
-    class="relative transition-all duration-1000 bg-context"
-    style="min-height:300px;--context-color:#000000;">
-    <PageHeader />
-
-    <section class="text-center py-24 bg-black relative">
-      <div class="absolute inset-0 w-full z-10 bg-black opacity-50"></div>
-      <img
-        src="/banner.jpg"
-        alt="Background Image"
-        class="absolute inset-0 w-full h-full object-cover opacity-40"
-      />
-      <div class="relative z-10 max-w-4xl mx-auto">
-        <h1
-          class="text-5xl md:text-6xl lg:text-7xl font-bold text-customYellow">
-          CELEBRATING MUSIC, ART, AND CULTURE
-        </h1>
-        <p
-          class="mt-4 text-sm md:text-base lg:text-lg text-gray-300 max-w-3xl mx-auto">
-          Experience the thrill of live music, celebrate diverse cultures, and
-          immerse yourself in captivating art. Get ready to embark on an
-          extraordinary journey of entertainment.
-        </p>
-        <div class="mt-8 flex justify-center space-x-4">
-          <a
-            href="#"
-            class="bg-customYellow text-black py-2 px-6 hover:bg-customYellowHover"
-            >EVENTS CALENDAR</a
-          >
-          <a
-            href="#"
-            class="bg-gray-800 text-white py-2 px-6 hover:bg-gray-700"
-            >TICKETS</a
-          >
-        </div>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>BookHaven - Tu librería de confianza</title>
+  </head>
+  <body class="min-h-screen bg-gray-100">
+    <header class="bg-white shadow-sm">
+      <div
+        class="container mx-auto px-4 py-6 flex justify-between items-center">
+        <h1 class="text-2xl font-bold text-gray-800">BookHaven</h1>
+        <nav>
+          <ul class="flex space-x-6">
+            <li>
+              <a
+                href="#"
+                class="text-gray-600 hover:text-gray-800"
+                >Inicio</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-gray-600 hover:text-gray-800"
+                >Libros</a
+              >
+            </li>
+          </ul>
+        </nav>
       </div>
-      <!-- Thumbnails -->
-      <div class="px-6 relative z-10 mt-12 max-w-7xl mx-auto">
-        <div class="flex flex-wrap mt-6 gap-4">
+    </header>
+
+    <section class="bg-blue-600 text-white py-20">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold mb-4">Bienvenido a BookHaven</h2>
+        <p class="text-xl mb-8">
+          Descubre tu próximo libro favorito con nosotros
+        </p>
+        <a
+          href="#"
+          class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-50 transition duration-300 inline-flex items-center">
+          Buscar libros
+        </a>
+      </div>
+    </section>
+
+    <section class="py-20">
+      <div class="container mx-auto px-4">
+        <h3 class="text-3xl font-bold text-center mb-12">Libros destacados</h3>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
           {
-            morePlaylists.map((playlist) => (
-              <BannerEvents playlist={playlist} />
+            [1, 2, 3, 4].map((book) => (
+              <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img
+                  src="https://placehold.co/200x300"
+                  alt={`Book ${book}`}
+                  class="w-full h-80 object-cover"
+                />
+                <div class="p-6">
+                  <h4 class="font-bold text-xl mb-2">Book Title {book}</h4>
+                  <p class="text-gray-600 mb-4">Author Name</p>
+                  <a
+                    href="#"
+                    class="text-blue-600 font-semibold hover:text-blue-800 inline-flex items-center">
+                    Ver más
+                  </a>
+                </div>
+              </div>
             ))
           }
         </div>
       </div>
     </section>
 
-    <EventCategories />
-
-    <p class="mt-4 max-w-2xl mx-auto bg-black px-6 py-12 text-left">
-      Experience the thrill of live music, celebrate diverse cultures, and
-      immerse yourself in captivating art. Get ready to embark on an
-      extraordinary journey of entertainment.
-    </p>
-
-    <EventsTable />
-
-    <HomePagePosts />
-
-    <section class="relative p-4 text-white text-center py-14">
-      <div class="relative z-10 p-20 bg-customGray rounded">
-        <h2 class="text-5xl font-bold">GET YOUR TICKET TODAY</h2>
-        <p class="mt-4 max-w-2xl mx-auto">
-          Experience the thrill, excitement, and magic of upcoming events. Don’t
-          miss your chance to be part of the action – get your ticket today.
-        </p>
-        <button
-          class="mt-12 px-8 py-4 bg-customYellow text-black hover:bg-customYellowHover"
-          >BUY TICKET NOW</button
-        >
-        <img
-          src="/singer.png"
-          alt="Background"
-          class="absolute bottom-0 right-9 w-1/4 h-auto object-cover z-0"
-        />
+    <footer class="bg-gray-800 text-white py-12">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h5 class="font-bold text-lg mb-4">Sobre nosotros</h5>
+            <p class="text-gray-400">
+              BookHaven es tu libreria independiente, dedicada a buscar las
+              mejores obras de literatura y fomentar un amor por la lectura en
+              nuestra comunidad.
+            </p>
+          </div>
+          <div>
+            <h5 class="font-bold text-lg mb-4">Enlaces rapidos</h5>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white"
+                  >Inicio</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white"
+                  >Libros</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-8 pt-8 border-t border-gray-700 text-center">
+          <p class="text-gray-400">
+            &copy; 2024 BookHaven. Todos los derechos reservados.
+          </p>
+        </div>
       </div>
-    </section>
-
-    <PageFooter />
-  </div>
-</Layout>
+    </footer>
+  </body>
+</html>

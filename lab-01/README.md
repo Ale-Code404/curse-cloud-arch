@@ -1,29 +1,47 @@
-# Event Website Template built with Astro (3.0) 
+# Astro Starter Kit: Minimal
 
-This project is an event website template built using Astro 3.0 and TailwindCSS. It provides a modern, responsive design ideal for showcasing events, concerts, and festivals. The template is easy to customize and deploy, making it a great starting point for any event-based web project.
+```sh
+npm create astro@latest -- --template minimal
+```
 
-You can find this template available at [Astro Official Themes](https://portal.astro.build/themes/astroevent-landing-page/) page.
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
+[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
 
-## Features
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-- **Modern Design**: Sleek and contemporary design based on a template by Denanda Prayoga.
-- **Responsive Layout**: Fully responsive, ensuring a seamless experience on any device.
-- **Built with Astro**: Utilizes the power of Astro for fast performance and optimized builds.
-- **TailwindCSS Integration**: Styled using TailwindCSS for easy customization and utility-first CSS.
+## 🚀 Project Structure
 
-## Installation
+Inside of your Astro project, you'll see the following folders and files:
 
-To get started with this project, clone the repository and install the dependencies.
-- npm install
-- npm run dev
+```text
+/
+├── public/
+├── src/
+│   └── pages/
+│       └── index.astro
+└── package.json
+```
 
-## License
-This project is licensed under the MIT License. 
+Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
-## Credits
-- Developer: [Zeeshan Rasool](https://codeleftover.com/)
-- Astro Documentation: https://docs.astro.build/
-- TailwindCSS: https://tailwindcss.com/
-- Template Design: [Denanda Prayoga](https://dribbble.com/shots/21507198-EventsGo-landing-page)
+There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
 
-[![Built with Astro](https://astro.badg.es/v2/built-with-astro/tiny.svg)](https://astro.build)
+Any static assets, like images, can be placed in the `public/` directory.
+
+## 🧞 Commands
+
+All commands are run from the root of the project, from a terminal:
+
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |
+
+## 👀 Want to learn more?
+
+Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
